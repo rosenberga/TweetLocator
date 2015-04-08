@@ -15,31 +15,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.reachedEnd = 2;
     self.tableView.delegate = self;
+    self.allTweets = [[NSMutableArray alloc] init];
     [self getTweets];
-    //[self loadAllTweets];
 }
 
 - (void) loadAllTweets {
-    if(self.allTweets) {
-        [self.allTweets removeAllObjects];
-    } else {
-        self.allTweets = [[NSMutableArray alloc] init];
-    }
     
     for(NSDictionary* tweet in self.objects) {
-         TTTweetObject* obj = [[TTTweetObject alloc] init];
-         obj.point = [[MKPointAnnotation alloc]init];
-         obj.status = tweet[@"text"];
-         NSDictionary* user = tweet[@"user"];
-         obj.userName = user[@"screen_name"];
-         NSDictionary* geo = tweet[@"geo"];
-         NSArray* coord = geo[@"coordinates"];
-         NSString* lat = coord[0];
-         NSString* lon = coord[1];
-         obj.point.coordinate = CLLocationCoordinate2DMake([lat doubleValue], [lon doubleValue]);
-         [self.allTweets addObject:obj];
+        @try {
+            TTTweetObject* obj = [[TTTweetObject alloc] init];
+            obj.point = [[MKPointAnnotation alloc]init];
+            obj.status = tweet[@"text"];
+            NSDictionary* user = tweet[@"user"];
+            obj.userName = user[@"screen_name"];
+            NSDictionary* geo = tweet[@"geo"];
+            NSArray* coord = geo[@"coordinates"];
+            NSString* lat = coord[0];
+            NSString* lon = coord[1];
+            obj.point.coordinate = CLLocationCoordinate2DMake([lat doubleValue], [lon doubleValue]);
+            [self.allTweets addObject:obj];
+        }
+        @catch (NSException *exception) {
+            NSLog(@"error");
+        }
      }
 }
 
@@ -62,18 +61,25 @@
                         NSLog(@"error in saving account");
                     }
                 }];
-                [self getTweetsWithGeo:geo withTimes:self.reachedEnd];
+                [self getTweetsWithGeo:geo withTimes:1];
             }
         }
     }];
     if([accountStore accounts].count > 0) {
         self.twitterAccount = [accountStore accounts][0];
         [self getTweetsWithGeo:geo withTimes:self.reachedEnd];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Twitter Account Found"
+                                                        message:@"Please connect your twitter account to this applicatio to retrieve data."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
     }
 }
 
 - (void) getTweetsWithGeo:(NSString*) geo withTimes:(int) times {
-    int sCount = 25 * times;
+    int sCount = 50;
     NSString* count = [NSString stringWithFormat:@"%i",sCount];
     NSLog(@"%@",count);
     
@@ -94,6 +100,13 @@
         
         if (error) {
             NSLog(@"error in getting tweets");
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:@"An error has occured in retrieving data. Please try again later."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+            
         }
         else {
             NSError *jsonError;
@@ -101,10 +114,16 @@
             
             if(!jsonError) {
                  self.objects = data[@"statuses"];
-                [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
-                [self performSelectorOnMainThread:@selector(loadAllTweets) withObject:nil waitUntilDone:YES];
+                [self loadAllTweets];
+                [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
             } else {
                 NSLog(@"error");
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                message:@"An error has occured in retrieving data. Please try again later."
+                                                               delegate:nil
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles:nil];
+                [alert show];
             }
         }
     }];
@@ -153,7 +172,7 @@
     return NO;
 }
 
-
+/*
 - (void)tableView:(UITableView *)tableView
   willDisplayCell:(UITableViewCell *)cell
 forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -164,7 +183,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     } else {
         NSLog(@"%zd %zd %zd",indexPath.row, self.objects.count, (self.reachedEnd*25)-1);
     }
-}
+}*/
 
 #pragma mark - Segues
 
