@@ -11,7 +11,7 @@
 #import <Social/Social.h>
 #import "TTLakerTweetTableViewController.h"
 
-@interface TTLakerLocatorHomeViewController : UIViewController
+@interface TTLakerLocatorHomeViewController : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *searchButton;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UILabel *sliderLabel;

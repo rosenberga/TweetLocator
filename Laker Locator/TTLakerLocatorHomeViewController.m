@@ -21,6 +21,8 @@
     if(self.searchText) {
         self.searchPhrase.text = self.searchText;
     }
+    
+    self.searchPhrase.delegate = self;
 }
 
 - (void) didReceiveMemoryWarning {
@@ -80,5 +82,9 @@
         self.searchText = self.searchPhrase.text;
     }
 }
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+        [textField resignFirstResponder];
+        return NO;
+    }
 
 @end
