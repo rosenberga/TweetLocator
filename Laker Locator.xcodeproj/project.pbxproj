@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C743F3AD1A3A75AC00FBBD50 /* TTTweetObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C743F3AC1A3A75AC00FBBD50 /* TTTweetObject.m */; };
+		C743F3B01A3A98CF00FBBD50 /* TTTweetMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = C743F3AF1A3A98CF00FBBD50 /* TTTweetMapView.m */; };
 		C754E8A31A38F167001F508A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C754E8A21A38F167001F508A /* main.m */; };
 		C754E8A61A38F167001F508A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C754E8A51A38F167001F508A /* AppDelegate.m */; };
 		C754E8A91A38F167001F508A /* Laker_Locator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C754E8A71A38F167001F508A /* Laker_Locator.xcdatamodeld */; };
-		C754E8AC1A38F167001F508A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C754E8AB1A38F167001F508A /* ViewController.m */; };
 		C754E8AF1A38F167001F508A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C754E8AD1A38F167001F508A /* Main.storyboard */; };
 		C754E8B11A38F167001F508A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C754E8B01A38F167001F508A /* Images.xcassets */; };
 		C754E8B41A38F167001F508A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C754E8B21A38F167001F508A /* LaunchScreen.xib */; };
 		C754E8C01A38F168001F508A /* Laker_LocatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C754E8BF1A38F168001F508A /* Laker_LocatorTests.m */; };
+		C754E8CA1A38F175001F508A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C754E8C91A38F175001F508A /* Social.framework */; };
+		C754E8CC1A38F17C001F508A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C754E8CB1A38F17C001F508A /* MapKit.framework */; };
+		C754E8CF1A38F271001F508A /* TTLakerLocatorHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C754E8CE1A38F271001F508A /* TTLakerLocatorHomeViewController.m */; };
+		C754E8D11A38F560001F508A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C754E8D01A38F560001F508A /* CoreLocation.framework */; };
+		C754E8D31A38F5AA001F508A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C754E8D21A38F5AA001F508A /* CoreGraphics.framework */; };
+		C754E8D51A38F5B2001F508A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C754E8D41A38F5B2001F508A /* UIKit.framework */; };
+		C754E8D71A38F5C0001F508A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C754E8D61A38F5C0001F508A /* Foundation.framework */; };
+		C79462A11A3A2B1600EAFF7B /* TTLakerTweetTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C79462A01A3A2B1600EAFF7B /* TTLakerTweetTableViewController.m */; };
+		C79462B81A3A3C3500EAFF7B /* TTTweetTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C79462B71A3A3C3500EAFF7B /* TTTweetTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,20 +38,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C743F3AB1A3A75AC00FBBD50 /* TTTweetObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTweetObject.h; sourceTree = "<group>"; };
+		C743F3AC1A3A75AC00FBBD50 /* TTTweetObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTweetObject.m; sourceTree = "<group>"; };
+		C743F3AE1A3A98CF00FBBD50 /* TTTweetMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTweetMapView.h; sourceTree = "<group>"; };
+		C743F3AF1A3A98CF00FBBD50 /* TTTweetMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTweetMapView.m; sourceTree = "<group>"; };
 		C754E89D1A38F167001F508A /* Laker Locator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Laker Locator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C754E8A11A38F167001F508A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C754E8A21A38F167001F508A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C754E8A41A38F167001F508A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C754E8A51A38F167001F508A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C754E8A81A38F167001F508A /* Laker_Locator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Laker_Locator.xcdatamodel; sourceTree = "<group>"; };
-		C754E8AA1A38F167001F508A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C754E8AB1A38F167001F508A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C754E8AE1A38F167001F508A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C754E8B01A38F167001F508A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C754E8B31A38F167001F508A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C754E8B91A38F168001F508A /* Laker LocatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Laker LocatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C754E8BE1A38F168001F508A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C754E8BF1A38F168001F508A /* Laker_LocatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Laker_LocatorTests.m; sourceTree = "<group>"; };
+		C754E8C91A38F175001F508A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		C754E8CB1A38F17C001F508A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C754E8CD1A38F271001F508A /* TTLakerLocatorHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTLakerLocatorHomeViewController.h; sourceTree = "<group>"; };
+		C754E8CE1A38F271001F508A /* TTLakerLocatorHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTLakerLocatorHomeViewController.m; sourceTree = "<group>"; };
+		C754E8D01A38F560001F508A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C754E8D21A38F5AA001F508A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C754E8D41A38F5B2001F508A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C754E8D61A38F5C0001F508A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C794629F1A3A2B1600EAFF7B /* TTLakerTweetTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTLakerTweetTableViewController.h; path = ../TTLakerTweetTableViewController.h; sourceTree = "<group>"; };
+		C79462A01A3A2B1600EAFF7B /* TTLakerTweetTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTLakerTweetTableViewController.m; path = ../TTLakerTweetTableViewController.m; sourceTree = "<group>"; };
+		C79462B61A3A3C3500EAFF7B /* TTTweetTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTweetTableCell.h; sourceTree = "<group>"; };
+		C79462B71A3A3C3500EAFF7B /* TTTweetTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTweetTableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +73,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C754E8D71A38F5C0001F508A /* Foundation.framework in Frameworks */,
+				C754E8D51A38F5B2001F508A /* UIKit.framework in Frameworks */,
+				C754E8D31A38F5AA001F508A /* CoreGraphics.framework in Frameworks */,
+				C754E8D11A38F560001F508A /* CoreLocation.framework in Frameworks */,
+				C754E8CC1A38F17C001F508A /* MapKit.framework in Frameworks */,
+				C754E8CA1A38F175001F508A /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +95,12 @@
 		C754E8941A38F167001F508A = {
 			isa = PBXGroup;
 			children = (
+				C754E8D61A38F5C0001F508A /* Foundation.framework */,
+				C754E8D41A38F5B2001F508A /* UIKit.framework */,
+				C754E8D21A38F5AA001F508A /* CoreGraphics.framework */,
+				C754E8D01A38F560001F508A /* CoreLocation.framework */,
+				C754E8CB1A38F17C001F508A /* MapKit.framework */,
+				C754E8C91A38F175001F508A /* Social.framework */,
 				C754E89F1A38F167001F508A /* Laker Locator */,
 				C754E8BC1A38F168001F508A /* Laker LocatorTests */,
 				C754E89E1A38F167001F508A /* Products */,
@@ -83,15 +119,23 @@
 		C754E89F1A38F167001F508A /* Laker Locator */ = {
 			isa = PBXGroup;
 			children = (
+				C794629F1A3A2B1600EAFF7B /* TTLakerTweetTableViewController.h */,
+				C79462A01A3A2B1600EAFF7B /* TTLakerTweetTableViewController.m */,
 				C754E8A41A38F167001F508A /* AppDelegate.h */,
 				C754E8A51A38F167001F508A /* AppDelegate.m */,
-				C754E8AA1A38F167001F508A /* ViewController.h */,
-				C754E8AB1A38F167001F508A /* ViewController.m */,
 				C754E8AD1A38F167001F508A /* Main.storyboard */,
 				C754E8B01A38F167001F508A /* Images.xcassets */,
 				C754E8B21A38F167001F508A /* LaunchScreen.xib */,
 				C754E8A71A38F167001F508A /* Laker_Locator.xcdatamodeld */,
 				C754E8A01A38F167001F508A /* Supporting Files */,
+				C754E8CD1A38F271001F508A /* TTLakerLocatorHomeViewController.h */,
+				C754E8CE1A38F271001F508A /* TTLakerLocatorHomeViewController.m */,
+				C79462B61A3A3C3500EAFF7B /* TTTweetTableCell.h */,
+				C79462B71A3A3C3500EAFF7B /* TTTweetTableCell.m */,
+				C743F3AB1A3A75AC00FBBD50 /* TTTweetObject.h */,
+				C743F3AC1A3A75AC00FBBD50 /* TTTweetObject.m */,
+				C743F3AE1A3A98CF00FBBD50 /* TTTweetMapView.h */,
+				C743F3AF1A3A98CF00FBBD50 /* TTTweetMapView.m */,
 			);
 			path = "Laker Locator";
 			sourceTree = "<group>";
@@ -171,6 +215,7 @@
 				TargetAttributes = {
 					C754E89C1A38F167001F508A = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = Q9RMH5KLK4;
 					};
 					C754E8B81A38F168001F508A = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -222,9 +267,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C754E8CF1A38F271001F508A /* TTLakerLocatorHomeViewController.m in Sources */,
+				C79462B81A3A3C3500EAFF7B /* TTTweetTableCell.m in Sources */,
 				C754E8A61A38F167001F508A /* AppDelegate.m in Sources */,
 				C754E8A91A38F167001F508A /* Laker_Locator.xcdatamodeld in Sources */,
-				C754E8AC1A38F167001F508A /* ViewController.m in Sources */,
+				C79462A11A3A2B1600EAFF7B /* TTLakerTweetTableViewController.m in Sources */,
+				C743F3B01A3A98CF00FBBD50 /* TTTweetMapView.m in Sources */,
+				C743F3AD1A3A75AC00FBBD50 /* TTTweetObject.m in Sources */,
 				C754E8A31A38F167001F508A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +465,7 @@
 				C754E8C51A38F168001F508A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C754E8C61A38F168001F508A /* Build configuration list for PBXNativeTarget "Laker LocatorTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +474,7 @@
 				C754E8C81A38F168001F508A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
