@@ -42,7 +42,7 @@
 		C743F3AC1A3A75AC00FBBD50 /* TTTweetObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTweetObject.m; sourceTree = "<group>"; };
 		C743F3AE1A3A98CF00FBBD50 /* TTTweetMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTweetMapView.h; sourceTree = "<group>"; };
 		C743F3AF1A3A98CF00FBBD50 /* TTTweetMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTweetMapView.m; sourceTree = "<group>"; };
-		C754E89D1A38F167001F508A /* Laker Locator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Laker Locator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C754E89D1A38F167001F508A /* Tweet Locator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tweet Locator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C754E8A11A38F167001F508A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C754E8A21A38F167001F508A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C754E8A41A38F167001F508A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 		C754E89E1A38F167001F508A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C754E89D1A38F167001F508A /* Laker Locator.app */,
+				C754E89D1A38F167001F508A /* Tweet Locator.app */,
 				C754E8B91A38F168001F508A /* Laker LocatorTests.xctest */,
 			);
 			name = Products;
@@ -183,7 +183,7 @@
 			);
 			name = "Laker Locator";
 			productName = "Laker Locator";
-			productReference = C754E89D1A38F167001F508A /* Laker Locator.app */;
+			productReference = C754E89D1A38F167001F508A /* Tweet Locator.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C754E8B81A38F168001F508A /* Laker LocatorTests */ = {
@@ -398,7 +398,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Laker Locator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tweet Locator";
 			};
 			name = Debug;
 		};
@@ -408,7 +408,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Laker Locator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Tweet Locator";
 			};
 			name = Release;
 		};
