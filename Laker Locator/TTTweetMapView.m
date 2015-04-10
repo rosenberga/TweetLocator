@@ -14,6 +14,7 @@
 }
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    self.mapView.showsUserLocation = NO;
     self.mapView.delegate = self;
     for(TTTweetObject* obj in self.allTweets) {
         MKPointAnnotation* point = obj.point;
@@ -22,6 +23,7 @@
         point.subtitle = obj.status;
         [self.mapView addAnnotation:point];
     }
+    [self.mapView showAnnotations:self.mapView.annotations animated:YES];
 }
 -(void) didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -40,8 +42,8 @@
                 pinView.image = [UIImage imageNamed:@"twitterlogosmall"];
             }
         }
-        [mapView showAnnotations:mapView.annotations animated:YES];
-        return pinView;
+        
+            return pinView;
     }
 }
 
